@@ -58,13 +58,28 @@
     { id: "contato", href: "contato.html", label: T("Contato", "Contact", "Contacto") }
   ];
 
-  var LOGO = '<img class="brand-mark" src="assets/img/rb/Icon-black.svg" alt="Prof. Rafael Barros" width="236" height="196">';
+  var LOGO = '<img class="brand-mark" src="assets/img/rb/Icon-menu.svg" alt="Prof. Rafael Barros" width="236" height="196">';
 
-  // Bandeiras: Brasil, Inglaterra e Espanha
+  // Bandeiras: Brasil, Reino Unido e Espanha (com brasão simplificado)
   var FLAGS = {
     pt: '<svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#009c3b"/><path d="M15 2.2 27.4 10 15 17.8 2.6 10z" fill="#ffdf00"/><circle cx="15" cy="10" r="4.4" fill="#002776"/><path d="M10.7 9.1a10 10 0 0 1 8.5 2.4" stroke="#fff" stroke-width=".9" fill="none"/></svg>',
-    en: '<svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><path d="M13 0h4v20h-4zM0 8h30v4H0z" fill="#ce1124"/></svg>',
-    es: '<svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#aa151b"/><rect y="5" width="30" height="10" fill="#f1bf00"/></svg>'
+    en: '<svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><clipPath id="uk-t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath>' +
+      '<rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/>' +
+      '<path d="M0 0l60 30M60 0L0 30" clip-path="url(#uk-t)" stroke="#c8102e" stroke-width="4"/>' +
+      '<path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>',
+    es: '<svg viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#aa151b"/><rect y="125" width="750" height="250" fill="#f1bf00"/>' +
+      // colunas de Hércules
+      '<g fill="#e8e8e8" stroke="#8c6d1f" stroke-width="5"><rect x="168" y="196" width="26" height="118"/><rect x="336" y="196" width="26" height="118"/></g>' +
+      '<g fill="#c8b100"><rect x="160" y="182" width="42" height="16"/><rect x="328" y="182" width="42" height="16"/><rect x="160" y="312" width="42" height="16"/><rect x="328" y="312" width="42" height="16"/></g>' +
+      '<g fill="#aa151b"><rect x="168" y="240" width="26" height="12"/><rect x="336" y="240" width="26" height="12"/></g>' +
+      // coroa
+      '<path d="M222 172l8-32 22 18 13-28 13 28 22-18 8 32z" fill="#c8b100" stroke="#8c6d1f" stroke-width="4"/>' +
+      // escudo esquartelado
+      '<path d="M215 178h100v92a50 50 0 0 1-100 0z" fill="#aa151b" stroke="#8c6d1f" stroke-width="5"/>' +
+      '<path d="M265 180h48v68h-48z" fill="#f0f0f0"/>' +
+      '<path d="M217 248h48v52a48 48 0 0 1-48-30z" fill="#f1bf00"/><path d="M227 248h8v62h-8zM245 248h8v66h-8z" fill="#aa151b"/>' +
+      '<rect x="230" y="196" width="22" height="30" fill="#f1bf00"/><circle cx="289" cy="212" r="12" fill="#aa151b"/>' +
+      '<circle cx="265" cy="302" r="10" fill="#e88a9f"/><circle cx="265" cy="225" r="13" fill="#005bbf" stroke="#c8b100" stroke-width="4"/></svg>'
   };
   function langButton(code, name) {
     return '<button type="button" data-set-lang="' + code + '" title="' + name + '" aria-label="' + name + '">' + FLAGS[code] + "</button>";
@@ -84,8 +99,7 @@
 
     return '<a class="skip-link" href="#conteudo">' + T("Pular para o conteúdo", "Skip to content", "Saltar al contenido") + "</a>" +
       '<div class="wrap">' +
-      '<a class="brand" href="index.html">' + LOGO +
-      '<span class="brand-text"><span class="brand-sub">' + T("Engenharia<br>Elétrica · IFPE", "Electrical<br>Engineering · IFPE", "Ingeniería<br>Eléctrica · IFPE") + "</span></span></a>" +
+      '<a class="brand" href="index.html">' + LOGO + "</a>" +
       '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">' + icon("menu") + "</button>" +
       '<nav class="main-nav" id="main-nav" aria-label="Principal"><ul>' + items + "</ul></nav>" +
       '<div class="lang-switch" role="group" aria-label="Idioma / Language / Idioma">' +
@@ -100,9 +114,9 @@
       '<img class="footer-logo" src="assets/img/rb/Icon-white.svg" alt="Prof. Rafael Barros" width="236" height="196">' +
       '<span class="fname">Prof. Dr. Rafael M. R. Barros</span>' +
       "<p>" + T(
-        "Professor da área de Engenharia Elétrica do Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Pesquisador em sistemas elétricos de potência.",
-        "Professor of Electrical Engineering at the Federal Institute of Pernambuco (IFPE), Garanhuns campus. Researcher in electric power systems.",
-        "Profesor de Ingeniería Eléctrica del Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Investigador en sistemas eléctricos de potencia."
+        "Professor de Engenharia Elétrica do Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Líder do Grupo de Pesquisa em Sistemas Elétricos (GSEL).",
+        "Professor of Electrical Engineering at the Federal Institute of Pernambuco (IFPE), Garanhuns campus. Leader of the Electrical Systems Research Group (GSEL).",
+        "Profesor de Ingeniería Eléctrica del Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Líder del Grupo de Investigación en Sistemas Eléctricos (GSEL)."
       ) + "</p>" +
       '<div class="social">' +
       '<a href="https://www.linkedin.com/in/rafaelmrbarros/" target="_blank" rel="noopener" aria-label="LinkedIn">' + icon("linkedin") + "</a>" +
@@ -119,8 +133,7 @@
       '<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57189575900" target="_blank" rel="noopener">Scopus</a></li>' +
       '<li><a href="https://ieeexplore.ieee.org/author/37089947436" target="_blank" rel="noopener">IEEE Xplore</a></li>' +
       "</ul></div></div>" +
-      '<div class="footer-bottom"><span>© ' + year + " Rafael M. R. Barros. " + T("Todos os direitos reservados.", "All rights reserved.", "Todos los derechos reservados.") + "</span>" +
-      "<span>IFPE · Campus Garanhuns · LabSEL</span></div></div>";
+      '<div class="footer-bottom"><span>© ' + year + " Rafael M. R. Barros. " + T("Todos os direitos reservados.", "All rights reserved.", "Todos los derechos reservados.") + "</span></div></div>";
   }
 
   // ---------- idioma ----------
