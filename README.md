@@ -99,3 +99,15 @@ sobre a página (usado no agendamento de atendimento).
 3. O GitHub Pages publica em cerca de 1 minuto (*Actions › pages-build-deployment*).
 
 Configuração do Pages: *Settings › Pages › Deploy from a branch*, branch `main`, pasta `/ (root)`.
+
+## Buscadores (Google, Bing)
+
+- `sitemap.xml` lista todas as páginas. Ao criar uma página nova, inclua-a no sitemap e
+  atualize a data `lastmod` das páginas alteradas.
+- Cada página tem no `<head>` a descrição, o endereço canônico e as tags Open Graph/Twitter
+  (título, descrição e a imagem `assets/img/og-image.jpg`), usadas nos resultados de busca e
+  nas prévias de links em redes sociais e no WhatsApp.
+- `index.html` e `sobre.html` têm dados estruturados (`application/ld+json`) que descrevem o
+  professor e seus perfis acadêmicos.
+- O site está cadastrado no Google Search Console (propriedade de prefixo de URL
+  `https://prof-rafaelbarros.github.io/site/`), onde se acompanha a indexação.

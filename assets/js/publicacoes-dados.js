@@ -157,8 +157,8 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2023, loc: "Vitória, Brasil",
     title: "UmBUH - A Experiência do 1º Hub de Inovação do Setor Elétrico na Região Nordeste",
-    url: "https://sendi.org.br/sendi2023/search-technical-jobs/trabalhosfull/2327%20-%20UmBUH%20-%20A%20Experi%C3%AAncia%20do%201%C2%BA%20Hub%20de%20Inova%C3%A7%C3%A3o%20do%20Setor%20El%C3%A9trico%20na%20Regi%C3%A3o%20Nordeste.pdf",
-    meta: [["event", "XXVII Seminário Nacional de Distribuição de Energia Elétrica", "https://sendi.org.br/sendi2023/"]],
+    url: "https://www.researchgate.net/publication/416769689_UmBUH_-A_Experiencia_do_1_Hub_de_Inovacao_do_Setor_Eletrico_na_Regiao_Nordeste",
+    meta: [["event", "XXVII Seminário Nacional de Distribuição de Energia Elétrica", "https://www.sendi.org.br/"]],
     al: "pt",
     abs: "Este trabalho apresenta a experiência do UmBUH, o hub pioneiro de inovação no setor elétrico da região Nordeste do Brasil. Uma iniciativa fruto da parceria entre a Eletrobrás Chesf e o INSA, o UmBUH tem como principal objetivo fortalecer a inovação dentro do PDI regulado pela Aneel. O hub atua em todo o ciclo do processo de inovação, desde o mapeamento de dores até o tracionamento das soluções desenvolvidas para o mercado. Os resultados são impulsionados por chamadas de inovação aberta, prospecção de startups e gestão ágil de projetos. No primeiro ano de operação, o UmBUH produziu quatro soluções tecnológicas para atender a dores específicas da Chesf. Essas soluções atingiram TRL entre 6 e 7 em um período de apenas 6 meses de desenvolvimento. Atualmente, elas estão sendo preparadas para o lançamento no mercado, com um valuation superior a R$ 6 milhões. Estes resultados foram possíveis graças a um conjunto de metodologias exclusivas desenvolvidas pelo UmBUH, focadas em atender às particularidades do programa de PDI do setor elétrico. Os resultados demonstram que o modelo do UmBUH pode ser estratégico para empresas de distribuição que buscam alavancar o processo de inovação, especialmente devido as atualizações geradas pelo PROPDI e pelo PEQuI."
   },
