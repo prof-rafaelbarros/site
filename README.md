@@ -1,47 +1,91 @@
 # Site do Prof. Rafael Barros
 
-Site estático publicado com GitHub Pages em https://prof-rafaelbarros.github.io/site/
+Site pessoal do Prof. Dr. Rafael Mendonça Rocha Barros, professor de Engenharia Elétrica do
+IFPE campus Garanhuns e líder do Grupo de Pesquisa em Sistemas Elétricos (GSEL).
+
+**Endereço:** https://prof-rafaelbarros.github.io/site/
+
+Site estático (HTML, CSS e JavaScript puros, sem etapa de build), publicado pelo GitHub Pages
+a partir da raiz do branch `main`.
+
+## Páginas
+
+| Arquivo | Página | Conteúdo |
+|---|---|---|
+| `index.html` | Início | Boas-vindas, apresentação e carrossel de fotos |
+| `sobre.html` | Sobre o Professor | Minicurrículo e perfis nas bases bibliográficas |
+| `ensino.html` | Ensino | Disciplinas (Google Classroom) e agendamento de atendimento |
+| `pesquisa.html` | Pesquisa | Acesso a GSEL, Publicações e Produtos Tecnológicos |
+| `gsel.html` | Pesquisa › GSEL | Grupo de pesquisa e link para o site oficial |
+| `publicacoes.html` | Pesquisa › Publicações | Livros, revistas e congressos, com filtro e busca |
+| `produtos.html` | Pesquisa › Produtos Tecnológicos | Programas de computador e patentes, com filtro e busca |
+| `orientacoes.html` | Orientações | Templates, tutoriais, congressos, periódicos e eventos |
+| `contato.html` | Contato | Telefone, e-mail, endereço e mapa do LabSEL |
 
 ## Estrutura
 
-| Arquivo | Página |
-|---|---|
-| `index.html` | 1. Página inicial |
-| `sobre.html` | 2. Sobre o Professor |
-| `ensino.html` | 3. Ensino |
-| `pesquisa.html` | 4. Pesquisa |
-| `gsel.html` | GSEL – Grupo de Pesquisa em Sistemas Elétricos |
-| `orientacoes.html` | 4.1 Orientações |
-| `publicacoes.html` | 4.2 Publicações (dados em `assets/js/publicacoes-dados.js`) |
-| `projetos.html` | 4.3 Projetos de PD&I |
-| `contato.html` | 5. Contato |
+```
+assets/
+  css/style.css               identidade visual (cores e fontes no início do arquivo)
+  js/site.js                  menu, rodapé, idiomas, carrossel e pop-up de agendamento
+  js/publicacoes-dados.js     lista de publicações
+  js/publicacoes.js           montagem, filtro e busca das publicações
+  js/produtos.js              filtro e busca dos produtos tecnológicos
+  img/                        fotos, capas, ilustrações e logotipos
+  docs/                       arquivos para download da página Orientações
+scripts/versao.ps1            atualiza a versão de CSS/JS antes de publicar
+```
 
-- `assets/css/style.css` — identidade visual (cores definidas no início do arquivo).
-- `assets/js/site.js` — menu, rodapé e troca de idioma, compartilhados por todas as páginas.
+O menu e o rodapé são gerados por `assets/js/site.js`; para alterá-los, edite esse arquivo
+(não é preciso mexer em cada página).
 
 ## Idiomas
 
-Português é o padrão. Todo texto aparece três vezes, uma por idioma:
+Português é o padrão; inglês e espanhol são escolhidos pelas bandeiras no topo. Todo texto
+aparece três vezes, uma por idioma:
 
 ```html
 <span data-l="pt">Ensino</span><span data-l="en">Teaching</span><span data-l="es">Docencia</span>
 ```
 
-Ao editar um texto, altere as três versões. O idioma escolhido fica salvo no navegador
-e também pode ser forçado pelo endereço, por exemplo `publicacoes.html?lang=en`.
+Ao editar um texto, altere as três versões. O idioma escolhido fica salvo no navegador e
+também pode ser forçado pelo endereço, por exemplo `publicacoes.html?lang=en`.
 
-## Adicionar uma publicação
+## Tarefas comuns
 
-Inclua um novo bloco em `assets/js/publicacoes-dados.js`, copiando um existente do mesmo tipo
-(`book`, `journal` ou `conf`). A capa, se houver, vai em `assets/img/pub/`.
+**Adicionar uma publicação** — inclua um bloco em `assets/js/publicacoes-dados.js`, copiando
+um existente do mesmo tipo (`book`, `journal` ou `conf`). A capa, se houver, vai em
+`assets/img/pub/`. Congressos sem capa exibem a sigla e o ano; a sigla é definida na lista
+`EVENTS` de `assets/js/publicacoes.js`.
 
-## Publicação no GitHub Pages
+**Adicionar um produto tecnológico** — copie um bloco `<article class="product">` em
+`produtos.html`, ajuste `data-type` (`patent` ou `software`), a ilustração em
+`assets/img/produtos/` e os contadores dos botões de filtro.
 
-Os arquivos desta pasta ficam na raiz do repositório `prof-rafaelbarros/site`.
-Em *Settings → Pages*, use *Deploy from a branch*, branch `main`, pasta `/ (root)`.
+**Atualizar as métricas dos perfis** — os valores de índice h, citações e trabalhos são fixos
+em `sobre.html` (elementos `data-metric`). Atualize os números diretamente no arquivo.
 
-## Antes de cada publicação
+**Adicionar um arquivo em Orientações** — coloque o arquivo em `assets/docs/` e crie o link com
+o atributo `download`, que define o nome do arquivo baixado:
 
-Execute `powershell -File scripts\versao.ps1`. Ele atualiza o número de versão
-(`?v=...`) dos arquivos CSS e JS em todas as páginas, para que os visitantes
-recebam o visual novo imediatamente, sem precisar limpar o cache do navegador.
+```html
+<a class="dl" href="assets/docs/arquivo.docx" download="Nome do Arquivo.docx">...</a>
+```
+
+**Botão que abre em pop-up** — links com o atributo `data-popup` abrem dentro de uma janela
+sobre a página (usado no agendamento de atendimento).
+
+## Publicação
+
+1. Execute `powershell -File scripts\versao.ps1`. Ele atualiza o número de versão (`?v=...`)
+   de CSS e JS em todas as páginas, para que os visitantes recebam o visual novo
+   imediatamente, sem precisar limpar o cache do navegador.
+2. Envie as alterações para o branch `main`:
+   ```
+   git add -A
+   git commit -m "Descrição da alteração"
+   git push
+   ```
+3. O GitHub Pages publica em cerca de 1 minuto (*Actions › pages-build-deployment*).
+
+Configuração do Pages: *Settings › Pages › Deploy from a branch*, branch `main`, pasta `/ (root)`.
