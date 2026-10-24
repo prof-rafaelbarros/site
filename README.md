@@ -39,3 +39,9 @@ Inclua um novo bloco em `assets/js/publicacoes-dados.js`, copiando um existente 
 
 Os arquivos desta pasta ficam na raiz do repositório `prof-rafaelbarros/site`.
 Em *Settings → Pages*, use *Deploy from a branch*, branch `main`, pasta `/ (root)`.
+
+## Antes de cada publicação
+
+Execute `powershell -File scripts\versao.ps1`. Ele atualiza o número de versão
+(`?v=...`) dos arquivos CSS e JS em todas as páginas, para que os visitantes
+recebam o visual novo imediatamente, sem precisar limpar o cache do navegador.
