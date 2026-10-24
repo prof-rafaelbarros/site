@@ -135,6 +135,7 @@
       '<li><a href="https://scholar.google.com.br/citations?user=nwmX8RcAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>' +
       '<li><a href="https://www.scopus.com/authid/detail.uri?authorId=57189575900" target="_blank" rel="noopener">Scopus</a></li>' +
       '<li><a href="https://ieeexplore.ieee.org/author/37089947436" target="_blank" rel="noopener">IEEE Xplore</a></li>' +
+      '<li><a href="https://www.amazon.com.br/stores/Rafael-M.-R.-Barros/author/B0GCPRVSTB" target="_blank" rel="noopener">Amazon</a></li>' +
       "</ul></div></div>" +
       '<div class="footer-bottom"><span>© ' + year + " Rafael M. R. Barros. " + T("Todos os direitos reservados.", "All rights reserved.", "Todos los derechos reservados.") + "</span></div></div>";
   }
@@ -213,7 +214,7 @@
     if (!root) return;
     var slides = root.querySelectorAll(".slide");
     var dots = root.querySelector(".car-dots");
-    var current = 0, timer = null, DELAY = 5000;
+    var current = 0, timer = null, DELAY = 3000;
 
     slides.forEach(function (_, i) {
       var b = document.createElement("button");

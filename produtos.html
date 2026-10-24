@@ -26,10 +26,40 @@
   <section class="section">
     <div class="wrap">
 
-      <h2 class="section-title"><span data-l="pt">Programas de computador</span><span data-l="en">Software</span><span data-l="es">Programas de computadora</span> <span class="count">7</span></h2>
+      <div class="pub-toolbar">
+        <div class="filters" role="group" aria-label="Filtro">
+          <button type="button" data-pfilter="all" aria-pressed="true"><span data-l="pt">Todos</span><span data-l="en">All</span><span data-l="es">Todos</span><span class="n">8</span></button>
+          <button type="button" data-pfilter="patent" aria-pressed="false"><span data-l="pt">Patentes</span><span data-l="en">Patents</span><span data-l="es">Patentes</span><span class="n">1</span></button>
+          <button type="button" data-pfilter="software" aria-pressed="false"><span data-l="pt">Programas de computador</span><span data-l="en">Software</span><span data-l="es">Programas de computadora</span><span class="n">7</span></button>
+        </div>
+        <label class="search">
+          <i data-icon="search"></i>
+          <input type="search" id="prod-search" placeholder="Buscar por nome, tema ou autor" data-ph-pt="Buscar por nome, tema ou autor" data-ph-en="Search by name, topic or author" data-ph-es="Buscar por nombre, tema o autor" aria-label="Buscar">
+        </label>
+      </div>
+      <div class="product-grid" id="prod-list">
 
+      <!-- Patente PNT -->
+      <article class="product" data-type="patent">
+        <div class="product-media"><img src="assets/img/produtos/patente-pnt.svg" alt="" loading="lazy"></div>
+        <div class="product-body">
+          <div class="product-tags"><span class="ptype"><span data-l="pt">Patente de Invenção</span><span data-l="en">Invention Patent</span><span data-l="es">Patente de Invención</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
+          <h3><span data-l="pt">Sistema e Método para Identificação e Quantificação de Perda Não Técnica de Energia Elétrica em Sistemas de Medição de Baixa Tensão</span><span data-l="en">System and Method for Identifying and Quantifying Non-Technical Electricity Losses in Low-Voltage Metering Systems</span><span data-l="es">Sistema y Método para la Identificación y Cuantificación de Pérdidas No Técnicas de Energía Eléctrica en Sistemas de Medición de Baja Tensión</span></h3>
+          <p data-l="pt">Fraudes e furtos de energia em unidades consumidoras de baixa tensão geram perdas não técnicas, que reduzem a receita das distribuidoras e encarecem a tarifa para todos. A invenção identifica as unidades com indícios de perda não técnica e quantifica a energia não faturada.</p>
+          <p data-l="en">Energy fraud and theft at low-voltage consumer units cause non-technical losses, which reduce utilities' revenue and raise tariffs for everyone. The invention identifies units showing signs of non-technical loss and quantifies the unbilled energy.</p>
+          <p data-l="es">Los fraudes y hurtos de energía en unidades consumidoras de baja tensión generan pérdidas no técnicas, que reducen los ingresos de las distribuidoras y encarecen la tarifa para todos. La invención identifica las unidades con indicios de pérdida no técnica y cuantifica la energía no facturada.</p>
+          <ul class="features" data-l="pt"><li>Identificação de unidades com indícios de irregularidade</li><li>Quantificação da energia não faturada</li><li>Aplicável a sistemas de medição de baixa tensão</li><li>Apoio à priorização de inspeções em campo</li></ul>
+          <ul class="features" data-l="en"><li>Identification of units showing signs of irregularity</li><li>Quantification of unbilled energy</li><li>Applicable to low-voltage metering systems</li><li>Support for prioritizing field inspections</li></ul>
+          <ul class="features" data-l="es"><li>Identificación de unidades con indicios de irregularidad</li><li>Cuantificación de la energía no facturada</li><li>Aplicable a sistemas de medición de baja tensión</li><li>Apoyo a la priorización de inspecciones en campo</li></ul>
+          <dl class="pmeta">
+            <div><dt><span data-l="pt">Registro INPI</span><span data-l="en">INPI registration</span><span data-l="es">Registro INPI</span></dt><dd>BR 102026024629-8</dd></div>
+            <div><dt><span data-l="pt">Data</span><span data-l="en">Date</span><span data-l="es">Fecha</span></dt><dd>29/09/2026</dd></div>
+            <div><dt><span data-l="pt">Autor</span><span data-l="en">Author</span><span data-l="es">Autor</span></dt><dd>BARROS, R. M. R.</dd></div>
+          </dl>
+        </div>
+      </article>
       <!-- OtimizaCEL -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/otimizacel.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -49,7 +79,7 @@
       </article>
 
       <!-- OtimizaDER -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/otimizader.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -69,7 +99,7 @@
       </article>
 
       <!-- CERES Smart -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/ceres-smart.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -89,7 +119,7 @@
       </article>
 
       <!-- FadTrafo -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/fadtrafo.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -109,7 +139,7 @@
       </article>
 
       <!-- UmBUHGP -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/umbuhgp.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -129,7 +159,7 @@
       </article>
 
       <!-- DesagregaGD -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/desagregagd.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -149,7 +179,7 @@
       </article>
 
       <!-- CERES WEB -->
-      <article class="product">
+      <article class="product" data-type="software">
         <div class="product-media"><img src="assets/img/produtos/ceres-web.svg" alt="" loading="lazy"></div>
         <div class="product-body">
           <div class="product-tags"><span class="ptype"><span data-l="pt">Programa de Computador</span><span data-l="en">Software</span><span data-l="es">Programa de Computadora</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
@@ -168,28 +198,10 @@
         </div>
       </article>
 
-      <h2 class="section-title" style="margin-top:56px"><span data-l="pt">Patentes</span><span data-l="en">Patents</span><span data-l="es">Patentes</span> <span class="count">1</span></h2>
 
-      <!-- Patente PNT -->
-      <article class="product">
-        <div class="product-media"><img src="assets/img/produtos/patente-pnt.svg" alt="" loading="lazy"></div>
-        <div class="product-body">
-          <div class="product-tags"><span class="ptype"><span data-l="pt">Patente de Invenção</span><span data-l="en">Invention Patent</span><span data-l="es">Patente de Invención</span></span><span class="avail"><span data-l="pt">Disponível para Licenciamento ou Cessão</span><span data-l="en">Available for Licensing or Assignment</span><span data-l="es">Disponible para Licenciamiento o Cesión</span></span></div>
-          <h3><span data-l="pt">Sistema e Método para Identificação e Quantificação de Perda Não Técnica de Energia Elétrica em Sistemas de Medição de Baixa Tensão</span><span data-l="en">System and Method for Identifying and Quantifying Non-Technical Electricity Losses in Low-Voltage Metering Systems</span><span data-l="es">Sistema y Método para la Identificación y Cuantificación de Pérdidas No Técnicas de Energía Eléctrica en Sistemas de Medición de Baja Tensión</span></h3>
-          <p data-l="pt">Fraudes e furtos de energia em unidades consumidoras de baixa tensão geram perdas não técnicas, que reduzem a receita das distribuidoras e encarecem a tarifa para todos. A invenção identifica as unidades com indícios de perda não técnica e quantifica a energia não faturada.</p>
-          <p data-l="en">Energy fraud and theft at low-voltage consumer units cause non-technical losses, which reduce utilities' revenue and raise tariffs for everyone. The invention identifies units showing signs of non-technical loss and quantifies the unbilled energy.</p>
-          <p data-l="es">Los fraudes y hurtos de energía en unidades consumidoras de baja tensión generan pérdidas no técnicas, que reducen los ingresos de las distribuidoras y encarecen la tarifa para todos. La invención identifica las unidades con indicios de pérdida no técnica y cuantifica la energía no facturada.</p>
-          <ul class="features" data-l="pt"><li>Identificação de unidades com indícios de irregularidade</li><li>Quantificação da energia não faturada</li><li>Aplicável a sistemas de medição de baixa tensão</li><li>Apoio à priorização de inspeções em campo</li></ul>
-          <ul class="features" data-l="en"><li>Identification of units showing signs of irregularity</li><li>Quantification of unbilled energy</li><li>Applicable to low-voltage metering systems</li><li>Support for prioritizing field inspections</li></ul>
-          <ul class="features" data-l="es"><li>Identificación de unidades con indicios de irregularidad</li><li>Cuantificación de la energía no facturada</li><li>Aplicable a sistemas de medición de baja tensión</li><li>Apoyo a la priorización de inspecciones en campo</li></ul>
-          <dl class="pmeta">
-            <div><dt><span data-l="pt">Registro INPI</span><span data-l="en">INPI registration</span><span data-l="es">Registro INPI</span></dt><dd>BR 102026024629-8</dd></div>
-            <div><dt><span data-l="pt">Data</span><span data-l="en">Date</span><span data-l="es">Fecha</span></dt><dd>29/09/2026</dd></div>
-            <div><dt><span data-l="pt">Autor</span><span data-l="en">Author</span><span data-l="es">Autor</span></dt><dd>BARROS, R. M. R.</dd></div>
-          </dl>
-        </div>
-      </article>
 
+      </div>
+      <p class="empty" id="prod-empty" hidden><span data-l="pt">Nenhum produto encontrado para esta busca.</span><span data-l="en">No products match this search.</span><span data-l="es">No se encontraron productos para esta búsqueda.</span></p>
       <div class="cta" style="margin-top:48px">
         <div>
           <h2><span data-l="pt">Interesse em licenciar uma tecnologia?</span><span data-l="en">Interested in licensing a technology?</span><span data-l="es">¿Interés en licenciar una tecnología?</span></h2>
@@ -203,5 +215,6 @@
 
 <footer class="site-footer"></footer>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/produtos.js"></script>
 </body>
 </html>

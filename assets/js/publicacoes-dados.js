@@ -116,7 +116,7 @@ window.PUBLICACOES = [
     title: "Determinação de Posicionamento Ótimo de Anel Equalizador em Isoladores Poliméricos",
     url: "https://rie.cujae.edu.cu/index.php/RIE/article/view/367",
     cover: "ingenieria-energetica.jpg",
-    meta: [["journal", "Ingeniería Energética", "http://rie.cujae.edu.cu/index.php/RIE/index"]],
+    meta: [["journal", "Ingeniería Energética", "https://rie.cujae.edu.cu/index.php/RIE/index"]],
     al: "pt",
     abs: "O comportamento do campo elétrico nas proximidades do terminal de linha de um isolador polimérico foi estudado em função do posicionamento do anel equalizador, com o objetivo de determinar a posição ótima de instalação do mesmo, dado que o campo elétrico que incide nas primeiras aletas do isolador é afetado de maneira significativa pela posição em que o anel equalizador é instalado. Adicionalmente a utilização de isoladores de vidro como extensão em isoladores poliméricos também foi avaliada, esse tipo de associação é uma prática comum das concessionárias brasileiras, no entanto, sua influência no comportamento do campo elétrico ainda é pouco conhecida. A distribuição do campo elétrico foi determinada por meio de simulações computacionais baseadas no Método dos Elementos Finitos. Os resultados sugerem uma posição ótima para a instalação do anel equalizador e permitiram chegar a algumas conclusões sobre a utilização de isoladores de vidro como extensão em isoladores poliméricos."
   },
@@ -190,7 +190,7 @@ window.PUBLICACOES = [
     type: "conf", year: 2019, loc: "Campina Grande, Brasil",
     title: "Detecção de Perdas Não-Técnicas Utilizando Mineração de Dados",
     url: "https://drive.google.com/file/d/1QkDggMRVt7Ax69srMlcqDhTRXHrBf-9f/view",
-    meta: [["event", "3rd International Workshop on Advanced Dielectrics and Applications (IWADA)", "http://iwada2019.rf.gd/index.html"]],
+    meta: [["event", "3rd International Workshop on Advanced Dielectrics and Applications (IWADA)"]],
     al: "en",
     abs: "A non-technical loss represents less income to electrical companies and are a massive problem to them. These losses, in most of the cases, are the result of irregular electrical consumption. It is common to use in loco inspections and sweep actions to identify fraudulent clients. However, these actions are often associated with high cost and low effectiveness. Thus, companies are recurring to data mining techniques in order to identify irregular customers using cadastral information, such as, class tension, supply voltage, type of connection, and mainly, consumption history data. In this work, it is intended to use data mining techniques to classify customers between regular (non-fraudulent) and irregular (fraudulent) using history consumption and derived attributes from it as inputs. The attributes will be obtained by calculating consumption monthly variations, and some statistical parameters, such as, average, mode, standard deviation and variance. Customers’ data from a distributor company with concession area in Brazil will be used. The Artificial Neural network algorithm will be used for the analyses. It is intended at the end of the work to determine which of these attributes, or which combination of attributes has the better explanatory capacity and consequently provides the best results to non-technical losses detection."
   },
@@ -246,7 +246,7 @@ window.PUBLICACOES = [
     type: "conf", year: 2015, loc: "Białystok, Polônia",
     title: "Evaluation of Mechanical Criteria Applied to the Transformers Windings",
     url: "https://drive.google.com/file/d/1yeh5SvTSoUm68x94IZEFO3RMT-NZeDwV/view",
-    meta: [["event", "XXIII International Conference on Electromagnetic Disturbances (EMD)", "http://teleinfo.pb.edu.pl/emd2015/"]],
+    meta: [["event", "XXIII International Conference on Electromagnetic Disturbances (EMD)"]],
     al: "en",
     abs: "Transformers are essential equipment for electrical systems and consist in the components of largest cost. Thus, when these devices have some kind of flaw, their repair or replacement, usually time consuming and costly, are needed. Thereby, in this paper the Von Mises criterion to the evaluation of failure proximity on the transformers windings is analyzed. This criterion is compared with the maximum normal stress criterion, which is normally used in transformer literature. With the results, it is possible to observe that the Von Mises criterion is more reasonable compared with the maximum normal stress criterion. It is proposed to use the Von mises criterion, since the results obtained, during the transformers design, can be closer to reality."
   },
@@ -278,7 +278,7 @@ window.PUBLICACOES = [
     type: "conf", year: 2013, loc: "Estocolmo, Suécia",
     title: "Electric Field Mapping in High Voltage Substation Using the Finite Elements Method",
     url: "http://www.cired.net/publications/cired2013/pdfs/CIRED2013_1298_final.pdf",
-    meta: [["event", "22nd International Conference on Electricity Distribution (CIRED)", "http://www.cired.net/publications/cired2013/"]],
+    meta: [["event", "22nd International Conference on Electricity Distribution (CIRED)", "https://www.cired.net/"]],
     al: "en",
     abs: "This paper aimed to study the behaviour of electric field and its influence within and in the vicinity of a high voltage substation, since the presence of electric fields intense can produce interactions with living organisms from harmful effects by long-term exposure. The study was performed by means of computer simulation using the software COMSOL Multiphysics®, which is based on Finite Element Method (FEM). With results of the simulations was possible to weigh if the values obtained meets the levels of electric field recommended by legislation. Was also possible to determine the voltage induced in a metallic tube in soil and in one human, the touch voltage and step voltage on the patio of the substation. The results of simulations were shown to be coherent, and they may serve as an aid in the evaluation process of electric field of complex structures."
   },

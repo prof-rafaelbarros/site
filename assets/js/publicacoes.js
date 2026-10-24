@@ -46,23 +46,23 @@
     return url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(text) + "</a>" : esc(text);
   }
 
-  // Eventos: [trecho do nome, sigla, logo opcional, logo claro (usa fundo escuro)]
+  // Eventos: [trecho do nome, sigla exibida na capa]
   var EVENTS = [
     ["Seminário Nacional de Distribuição", "SENDI"],
     ["CIRED", "CIRED"],
     ["CBGD", "CBGD"],
-    ["Inovação na Distribuição", "CIDE", "cide.webp"],
+    ["Inovação na Distribuição", "CIDE"],
     ["Open Innovation", "CICOI"],
-    ["IFPB campus Cajazeiras", "IFPB", "ifpb.png"],
-    ["Pós-graduação do IFPB", "SIMPIF", "ifpb.png"],
+    ["IFPB campus Cajazeiras", "IFPB"],
+    ["Pós-graduação do IFPB", "SIMPIF"],
     ["IWADA", "IWADA"],
     ["EGSE", "EGSE"],
     ["Simpósio Brasileiro de Sistemas Elétricos", "SBSE"],
     ["(ISH)", "ISH"],
-    ["IPMHVC", "IPMHVC", "ieee.svg"],
-    ["ERIAC", "ERIAC", "cigre.png", true],
+    ["IPMHVC", "IPMHVC"],
+    ["ERIAC", "ERIAC"],
     ["(EMD)", "EMD"],
-    ["ICHVE", "ICHVE", "ieee.svg"],
+    ["ICHVE", "ICHVE"],
     ["CLAGTEE", "CLAGTEE"],
     ["ALTAE", "ALTAE"]
   ];
@@ -71,9 +71,6 @@
     if (p.cover) return '<div class="pub-cover"><img src="assets/img/pub/' + p.cover + '" alt="" loading="lazy"></div>';
     var name = p.meta[0][1];
     var ev = EVENTS.filter(function (e) { return name.indexOf(e[0]) > -1; })[0];
-    if (ev && ev[2]) {
-      return '<div class="pub-cover logo' + (ev[3] ? " dark" : "") + '"><img src="assets/img/eventos/' + ev[2] + '" alt="' + esc(ev[1]) + '" loading="lazy"><small>' + p.year + "</small></div>";
-    }
     var short = ev ? ev[1] : name.split(/[\s:]/)[0];
     return '<div class="pub-cover ph"><div><span>' + esc(short) + "</span><small>" + p.year + "</small></div></div>";
   }
