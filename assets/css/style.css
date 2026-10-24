@@ -457,7 +457,7 @@ a.card:hover .card-media img { transform: scale(1.03); }
 .hero .welcome { font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.05; max-width: none; margin: 0; text-shadow: 0 2px 14px rgba(0, 0, 0, .45); }
 .hero .welcome-eyebrow { font-size: clamp(.95rem, 1.6vw, 1.25rem); letter-spacing: .16em; margin-bottom: 14px; text-shadow: 0 1px 8px rgba(0, 0, 0, .5); }
 .home-intro .intro-grid { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); gap: 40px; align-items: center; }
-.intro-text p { font-size: 1.12rem; line-height: 1.7; color: var(--ink); margin: 0; padding-left: 20px; border-left: 3px solid var(--accent); }
+.intro-text p { font-size: 1.2rem; line-height: 1.7; color: var(--ink); margin: 0; padding-left: 20px; border-left: 3px solid var(--accent); }
 @media (max-width: 860px) { .home-intro .intro-grid { grid-template-columns: 1fr; gap: 28px; } }
 .ids { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .ids li { display: flex; }
