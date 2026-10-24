@@ -50,11 +50,11 @@
       id: "pesquisa", href: "pesquisa.html", label: T("Pesquisa", "Research", "Investigación"),
       sub: [
         { id: "gsel", href: "gsel.html", label: "GSEL" },
-        { id: "orientacoes", href: "orientacoes.html", label: T("Orientações", "Supervision", "Orientaciones") },
         { id: "publicacoes", href: "publicacoes.html", label: T("Publicações", "Publications", "Publicaciones") },
-        { id: "projetos", href: "projetos.html", label: T("Projetos de PD&amp;I", "R&amp;D&amp;I Projects", "Proyectos de I+D+i") }
+        { id: "produtos", href: "produtos.html", label: T("Produtos Tecnológicos", "Technology Products", "Productos Tecnológicos") }
       ]
     },
+    { id: "orientacoes", href: "orientacoes.html", label: T("Orientações", "Supervision", "Orientaciones") },
     { id: "contato", href: "contato.html", label: T("Contato", "Contact", "Contacto") }
   ];
 
@@ -107,16 +107,19 @@
       "</div></div>";
   }
 
+  var IFPE = '(<a href="https://portal.ifpe.edu.br/" target="_blank" rel="noopener">IFPE</a>)';
+  var GSEL = '(<a href="https://gsel-ifpe.github.io/site/" target="_blank" rel="noopener">GSEL</a>)';
+
   function buildFooter() {
     var year = new Date().getFullYear();
     return '<div class="wrap"><div class="footer-grid">' +
       "<div>" +
       '<img class="footer-logo" src="assets/img/rb/Icon-white.svg" alt="Prof. Rafael Barros" width="236" height="196">' +
-      '<span class="fname">Prof. Dr. Rafael M. R. Barros</span>' +
+      '<span class="fname">Prof. Dr. Rafael Mendonça Rocha Barros</span>' +
       "<p>" + T(
-        "Professor de Engenharia Elétrica do Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Líder do Grupo de Pesquisa em Sistemas Elétricos (GSEL).",
-        "Professor of Electrical Engineering at the Federal Institute of Pernambuco (IFPE), Garanhuns campus. Leader of the Electrical Systems Research Group (GSEL).",
-        "Profesor de Ingeniería Eléctrica del Instituto Federal de Pernambuco (IFPE), campus Garanhuns. Líder del Grupo de Investigación en Sistemas Eléctricos (GSEL)."
+        "Professor de Engenharia Elétrica do Instituto Federal de Pernambuco " + IFPE + ", campus Garanhuns. Líder do Grupo de Pesquisa em Sistemas Elétricos " + GSEL + ".",
+        "Professor of Electrical Engineering at the Federal Institute of Pernambuco " + IFPE + ", Garanhuns campus. Leader of the Electrical Systems Research Group " + GSEL + ".",
+        "Profesor de Ingeniería Eléctrica del Instituto Federal de Pernambuco " + IFPE + ", campus Garanhuns. Líder del Grupo de Investigación en Sistemas Eléctricos " + GSEL + "."
       ) + "</p>" +
       '<div class="social">' +
       '<a href="https://www.linkedin.com/in/rafaelmrbarros/" target="_blank" rel="noopener" aria-label="LinkedIn">' + icon("linkedin") + "</a>" +
@@ -199,35 +202,97 @@
       el.outerHTML = icon(el.getAttribute("data-icon"), el.getAttribute("class") || "");
     });
 
-    initGallery();
+    initCarousel();
+    initPopup();
     setLang(getLang(), false);
   }
 
-  function initGallery() {
-    var track = document.querySelector(".gallery-track");
-    if (!track) return;
-    var step = function () { return track.clientWidth * 0.9; };
-    var prev = document.querySelector("[data-gallery-prev]");
-    var next = document.querySelector("[data-gallery-next]");
-    if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
-    if (next) next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+  // Carrossel automático da página inicial
+  function initCarousel() {
+    var root = document.querySelector(".carousel");
+    if (!root) return;
+    var slides = root.querySelectorAll(".slide");
+    var dots = root.querySelector(".car-dots");
+    var current = 0, timer = null, DELAY = 5000;
 
+    slides.forEach(function (_, i) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", String(i + 1));
+      b.addEventListener("click", function () { go(i); restart(); });
+      dots.appendChild(b);
+    });
+
+    function go(i) {
+      slides[current].classList.remove("is-active");
+      dots.children[current].removeAttribute("aria-current");
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add("is-active");
+      dots.children[current].setAttribute("aria-current", "true");
+      var nxt = slides[(current + 1) % slides.length].querySelector("img");
+      if (nxt) nxt.loading = "eager";
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        timer = setInterval(function () { go(current + 1); }, DELAY);
+      }
+    }
+    root.querySelector(".prev").addEventListener("click", function () { go(current - 1); restart(); });
+    root.querySelector(".next").addEventListener("click", function () { go(current + 1); restart(); });
+    root.addEventListener("mouseenter", function () { clearInterval(timer); });
+    root.addEventListener("mouseleave", restart);
+
+    // deslizar no celular
+    var x0 = null;
+    root.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { go(current + (dx < 0 ? 1 : -1)); restart(); }
+      x0 = null;
+    });
+
+    go(0);
+    restart();
+  }
+
+  // Links com data-popup abrem em janela sobreposta (ex.: agendamento)
+  function initPopup() {
     var box = document.createElement("div");
-    box.className = "lightbox";
+    box.className = "popup";
     box.setAttribute("role", "dialog");
     box.setAttribute("aria-modal", "true");
-    box.innerHTML = '<button type="button" aria-label="Fechar / Close">×</button><img alt="">';
+    box.innerHTML = '<div class="popup-panel"><div class="popup-bar"><span class="popup-title"></span>' +
+      '<a class="popup-ext" target="_blank" rel="noopener">' + T("Abrir em nova aba", "Open in new tab", "Abrir en nueva pestaña") + " " + icon("ext") + "</a>" +
+      '<button type="button" class="popup-close" aria-label="Fechar / Close">×</button></div>' +
+      '<iframe title="" loading="lazy"></iframe></div>';
     document.body.appendChild(box);
-    var big = box.querySelector("img");
-    function close() { box.classList.remove("open"); }
-    box.addEventListener("click", function (e) { if (e.target !== big) close(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
-    track.querySelectorAll("img").forEach(function (img) {
-      img.parentElement.setAttribute("tabindex", "0");
-      function open() { big.src = img.src; big.alt = img.alt; box.classList.add("open"); box.querySelector("button").focus(); }
-      img.parentElement.addEventListener("click", open);
-      img.parentElement.addEventListener("keydown", function (e) { if (e.key === "Enter") open(); });
+    var frame = box.querySelector("iframe");
+    var last = null;
+
+    function close() {
+      box.classList.remove("open");
+      document.body.style.overflow = "";
+      frame.src = "about:blank";
+      if (last) last.focus();
+    }
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[data-popup]");
+      if (!a) return;
+      e.preventDefault();
+      last = a;
+      box.querySelector(".popup-title").innerHTML = a.getAttribute("data-popup-title") ? a.getAttribute("data-popup-title") : a.innerHTML;
+      box.querySelector(".popup-ext").href = a.href;
+      frame.title = a.textContent.trim();
+      frame.src = a.href;
+      box.classList.add("open");
+      document.body.style.overflow = "hidden";
+      box.querySelector(".popup-close").focus();
     });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    box.querySelector(".popup-close").addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);

@@ -46,10 +46,35 @@
     return url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(text) + "</a>" : esc(text);
   }
 
+  // Eventos: [trecho do nome, sigla, logo opcional, logo claro (usa fundo escuro)]
+  var EVENTS = [
+    ["Seminário Nacional de Distribuição", "SENDI"],
+    ["CIRED", "CIRED"],
+    ["CBGD", "CBGD"],
+    ["Inovação na Distribuição", "CIDE", "cide.webp"],
+    ["Open Innovation", "CICOI"],
+    ["IFPB campus Cajazeiras", "IFPB", "ifpb.png"],
+    ["Pós-graduação do IFPB", "SIMPIF", "ifpb.png"],
+    ["IWADA", "IWADA"],
+    ["EGSE", "EGSE"],
+    ["Simpósio Brasileiro de Sistemas Elétricos", "SBSE"],
+    ["(ISH)", "ISH"],
+    ["IPMHVC", "IPMHVC", "ieee.svg"],
+    ["ERIAC", "ERIAC", "cigre.png", true],
+    ["(EMD)", "EMD"],
+    ["ICHVE", "ICHVE", "ieee.svg"],
+    ["CLAGTEE", "CLAGTEE"],
+    ["ALTAE", "ALTAE"]
+  ];
+
   function cover(p) {
     if (p.cover) return '<div class="pub-cover"><img src="assets/img/pub/' + p.cover + '" alt="" loading="lazy"></div>';
-    var short = (p.meta[0][1].match(/\(([^)]+)\)/) || [])[1] || p.meta[0][1].split(/[\s:]/)[0];
-    if (short.length > 8) short = short.slice(0, 7) + "…";
+    var name = p.meta[0][1];
+    var ev = EVENTS.filter(function (e) { return name.indexOf(e[0]) > -1; })[0];
+    if (ev && ev[2]) {
+      return '<div class="pub-cover logo' + (ev[3] ? " dark" : "") + '"><img src="assets/img/eventos/' + ev[2] + '" alt="' + esc(ev[1]) + '" loading="lazy"><small>' + p.year + "</small></div>";
+    }
+    var short = ev ? ev[1] : name.split(/[\s:]/)[0];
     return '<div class="pub-cover ph"><div><span>' + esc(short) + "</span><small>" + p.year + "</small></div></div>";
   }
 
@@ -57,12 +82,12 @@
     var meta = p.meta.map(function (m) {
       return "<span><b>" + L[m[0]] + ":</b> " + link(m[1], m[2]) + "</span>";
     }).join("");
-    meta += '<span class="year-badge">' + p.year + "</span><span>" + place(p.loc) + "</span>";
+    meta += '<span class="pub-where">' + icon("pin", "pin") + place(p.loc) + '<span class="dot">·</span>' + p.year + "</span>";
     var cta = p.type === "book" && !p.chapter ? L.readBook : L.readPaper;
     return '<li class="pub" data-type="' + p.type + '" data-search="' + esc((p.title + " " + p.meta.map(function (m) { return m[1]; }).join(" ") + " " + p.year + " " + p.abs).toLowerCase()) + '">' +
       cover(p) +
       "<div>" +
-      "<h3>" + (p.chapter ? '<span class="muted" style="font-weight:500">' + L.chapter + " · </span>" : "") + link(p.title, p.url) + "</h3>" +
+      "<h3>" + (p.chapter ? '<span class="muted" style="font-weight:500">' + L.chapter + " · </span>" : "") + esc(p.title) + "</h3>" +
       '<div class="pub-meta">' + meta + "</div>" +
       '<div class="pub-actions">' +
       '<a class="btn btn-outline btn-sm" href="' + esc(p.url) + '" target="_blank" rel="noopener">' + cta + " " + icon("ext") + "</a>" +
