@@ -235,14 +235,10 @@
     }
     function restart() {
       clearInterval(timer);
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        timer = setInterval(function () { go(current + 1); }, DELAY);
-      }
+      timer = setInterval(function () { go(current + 1); }, DELAY);
     }
     root.querySelector(".prev").addEventListener("click", function () { go(current - 1); restart(); });
     root.querySelector(".next").addEventListener("click", function () { go(current + 1); restart(); });
-    root.addEventListener("mouseenter", function () { clearInterval(timer); });
-    root.addEventListener("mouseleave", restart);
 
     // deslizar no celular
     var x0 = null;

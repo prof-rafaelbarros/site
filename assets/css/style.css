@@ -222,11 +222,10 @@ a.card:hover .card-media img { transform: scale(1.03); }
 @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } .facts div { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .1); } }
 
 /* ---------- carrossel (página inicial) ---------- */
-.hero-center .wrap { text-align: center; padding-top: 72px; padding-bottom: 72px; }
+.hero-center .wrap { text-align: center; padding-top: 64px; padding-bottom: 64px; }
 .hero-center h1 { max-width: none; margin-left: auto; margin-right: auto; }
 .hero-center .lead { margin: 0 auto; max-width: none; }
-.carousel-wrap { padding: 48px 0 72px; }
-.carousel { position: relative; background: var(--navy-900); height: clamp(220px, 44vw, 540px); overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(10, 27, 46, .12), 0 18px 48px rgba(10, 27, 46, .28); outline: 1px solid rgba(10, 27, 46, .08); }
+.carousel { position: relative; background: var(--navy-900); aspect-ratio: 4 / 3; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 10px rgba(10, 27, 46, .12), 0 18px 48px rgba(10, 27, 46, .28); outline: 1px solid rgba(10, 27, 46, .08); }
 .carousel .slides { position: absolute; inset: 0; }
 .carousel .slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity .6s ease; }
 .carousel .slide.is-active { opacity: 1; }
@@ -435,7 +434,8 @@ a.card:hover .card-media img { transform: scale(1.03); }
 .features { margin: 0 0 14px; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr; gap: 3px; font-size: .88rem; }
 .features li { position: relative; padding-left: 18px; }
 .features li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); }
-.pmeta { display: flex; flex-direction: column; gap: 2px; margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: .82rem; }
+.pmeta { display: flex; flex-wrap: wrap; gap: 2px 0; margin: auto 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: .78rem; }
+.pmeta div + div::before { content: "·"; margin: 0 8px; color: var(--steel-300); font-weight: 700; }
 .pmeta dt { display: inline; font-weight: 600; color: var(--ink); }
 .pmeta dt::after { content: ": "; }
 .pmeta dd { display: inline; margin: 0; color: var(--muted); }
@@ -449,7 +449,16 @@ a.card:hover .card-media img { transform: scale(1.03); }
 /* logos das bases bibliográficas */
 .ids .badge.logo { background: #fff; padding: 3px; box-shadow: inset 0 0 0 1px var(--line); }
 .ids .badge.logo img { width: 100%; height: 100%; object-fit: contain; }
-.ids .wordmark { height: 24px; width: auto; max-width: 170px; object-fit: contain; object-position: left; margin: 2px 0 4px; }
-.ids .sub-name { font-size: .8rem; color: var(--muted); font-weight: 600; margin-top: -2px; }
 .contact-list a.u { text-decoration: underline; text-underline-offset: 3px; }
-.ids .wordmark.tall { height: 34px; margin-bottom: 0; }
+
+/* página inicial: boas-vindas e texto ao lado do carrossel */
+.hero .welcome { font-size: clamp(2.2rem, 5.2vw, 3.8rem); line-height: 1.1; max-width: none; margin: 0; }
+.home-intro .intro-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 48px; align-items: center; }
+.intro-text p { font-size: 1.2rem; line-height: 1.7; color: var(--ink); margin: 0; padding-left: 20px; border-left: 3px solid var(--accent); }
+@media (max-width: 860px) { .home-intro .intro-grid { grid-template-columns: 1fr; gap: 28px; } }
+.ids { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ids li { display: flex; }
+.ids li > a { width: 100%; min-height: 92px; }
+.ids .badge.logo { width: 42px; height: 42px; }
+@media (max-width: 560px) { .ids { grid-template-columns: 1fr; } }
+.btn-ico { width: 18px; height: 18px; object-fit: contain; }
