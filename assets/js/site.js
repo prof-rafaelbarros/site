@@ -266,7 +266,7 @@
     box.innerHTML = '<div class="popup-panel"><div class="popup-bar"><span class="popup-title"></span>' +
       '<a class="popup-ext" target="_blank" rel="noopener">' + T("Abrir em nova aba", "Open in new tab", "Abrir en nueva pestaña") + " " + icon("ext") + "</a>" +
       '<button type="button" class="popup-close" aria-label="Fechar / Close">×</button></div>' +
-      '<iframe title="" loading="lazy"></iframe></div>';
+      '<iframe title=""></iframe></div>';
     document.body.appendChild(box);
     var frame = box.querySelector("iframe");
     var last = null;
