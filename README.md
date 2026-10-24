@@ -31,7 +31,9 @@ assets/
   js/publicacoes-dados.js     lista de publicações
   js/publicacoes.js           montagem, filtro e busca das publicações
   js/produtos.js              filtro e busca dos produtos tecnológicos
-  img/                        fotos, capas, ilustrações e logotipos
+  img/                        fotos, capas, imagens dos produtos e logotipos
+                                (rb/: logo do professor; gsel/: logo do GSEL;
+                                 bases/: ícones das bases bibliográficas)
   docs/                       arquivos para download da página Orientações
 scripts/versao.ps1            atualiza a versão de CSS/JS antes de publicar
 ```
@@ -59,11 +61,19 @@ um existente do mesmo tipo (`book`, `journal` ou `conf`). A capa, se houver, vai
 `EVENTS` de `assets/js/publicacoes.js`.
 
 **Adicionar um produto tecnológico** — copie um bloco `<article class="product">` em
-`produtos.html`, ajuste `data-type` (`patent` ou `software`), a ilustração em
-`assets/img/produtos/` e os contadores dos botões de filtro.
+`produtos.html` e ajuste:
+- `data-type`: `patent` (patente) ou `software` (programa de computador);
+- a imagem em `assets/img/produtos/` (proporção 16:9; use a classe `top` na imagem para
+  alinhar capturas de tela pelo topo e `light` no contêiner para fundo branco);
+- a situação: `<span class="avail">` (disponível para licenciamento ou cessão) ou
+  `<span class="inuse">` (em uso pelo titular);
+- o resumo e as funcionalidades, dentro do bloco recolhível `<details class="psummary">`;
+- o número de registro e a data no INPI (`<dl class="pmeta">`);
+- os contadores dos botões de filtro no topo da página.
 
-**Atualizar as métricas dos perfis** — os valores de índice h, citações e trabalhos são fixos
-em `sobre.html` (elementos `data-metric`). Atualize os números diretamente no arquivo.
+**Atualizar as métricas dos perfis** — os valores de índice h, citações, publicações,
+trabalhos e livros são fixos na seção "Perfis em bases bibliográficas" de `sobre.html`
+(números dentro de `<b>` em cada `<span class="mstats">`). Atualize-os diretamente no arquivo.
 
 **Adicionar um arquivo em Orientações** — coloque o arquivo em `assets/docs/` e crie o link com
 o atributo `download`, que define o nome do arquivo baixado:

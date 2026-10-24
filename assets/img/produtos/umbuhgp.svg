@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#163654"/><stop offset="1" stop-color="#0a1b2e"/></linearGradient><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern></defs><rect width="480" height="300" fill="url(#bg)"/><rect width="480" height="300" fill="url(#g)"/><g fill="none" stroke="#8cc3f5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<rect x="50" y="60" width="380" height="190" rx="10"/><path d="M50 92h380"/>
-<g fill="#2b7bd6" stroke="none"><circle cx="72" cy="76" r="5"/><circle cx="88" cy="76" r="5"/><circle cx="104" cy="76" r="5"/></g>
-<path d="M175 92v158M300 92v158"/>
-<g stroke-width="2.5"><rect x="70" y="108" width="88" height="30" rx="4"/><rect x="70" y="148" width="88" height="30" rx="4"/><rect x="195" y="108" width="88" height="30" rx="4" fill="#163654"/><rect x="320" y="108" width="92" height="30" rx="4" fill="#1b5ea8"/><rect x="320" y="148" width="92" height="30" rx="4" fill="#1b5ea8"/></g>
-<path d="M195 225l25-20 25 10 30-30" stroke="#7ee0a1"/><path d="M330 228h70" stroke="#f5c451"/><path d="M330 210h50" stroke="#f5c451"/>
-</g></svg>

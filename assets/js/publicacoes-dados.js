@@ -125,7 +125,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2025, loc: "Belo Horizonte, Brasil",
     title: "Diagnóstico e Correção da BDGD Ordinária para Execução de Fluxo de Carga em um Alimentador da Neoenergia Pernambuco",
-    url: "https://sendi.org.br/trabalhostecnicos/DIARIA27/9232%20-%20FELIPE%20SILVA.zip",
+    url: "https://www.researchgate.net/publication/416769469_Diagnostico_e_Correcao_da_BDGD_Ordinaria_para_Execucao_de_Fluxo_de_Carga_em_um_Alimentador_da_Neoenergia_Pernambuco_Tema_Redes_de_Distribuicao",
     meta: [["event", "XXV Seminário Nacional de Distribuição de Energia Elétrica (SENDI)", "https://sendi.org.br/"]],
     al: "pt",
     abs: "O estudo consiste na realização de um diagnóstico e posterior correção na Base de Dados Geográfica da Distribuição (BDGD) ordinária da Neoenergia Pernambuco disponibilizada no portal de dados abertos da Agência Nacional de Energia Elétrica (ANEEL) com objetivo de executar uma simulação de fluxo de carga na rede. A análise foi realizada por meio de rotinas em python e via simulações, verificando possíveis problemas que poderiam existir. A partir da análise, identificou-se vários problemas nas informações da BDGD que impediam a correta realização do fluxo de carga, tais como elementos isolados, tap errado de transformadores, curva de carga errada e má distribuição de fases. Na sequência foram implementas rotinas em linguagem Python para correção dos dados elétricos, e como resultado foi possível executar uma simulação de fluxo de carga na rede por meio do software OpenDSS. Os resultados da simulação mostram que corrigir dados incorretos na BDGD melhora significativamente o fluxo de potência da rede, deixando a apta para possíveis analises. Dessa forma, os resultados apresentados no trabalho podem ser utilizados por concessionárias de distribuição de energia para identificar e corrigir erros típicos em suas BDGSs, contribuindo para melhoria da qualidade das informações regulatórias da distribuição, realização de estudos elétricos mais precisos, dentre outros benefícios."
@@ -134,7 +134,7 @@ window.PUBLICACOES = [
     type: "conf", year: 2024, loc: "Chicago, EUA",
     title: "Enhancing Grid Reliability: Optimal Allocation of DERs for Load Support During Contingencies",
     url: "https://doi.org/10.1049/icp.2024.2557",
-    meta: [["event", "CIRED Chicago Workshop 2024: Resilience of Electric Distribution Systems", "https://cired2024chicago.org/"]],
+    meta: [["event", "CIRED Chicago Workshop 2024: Resilience of Electric Distribution Systems", "https://www.cired.net/"]],
     al: "en",
     abs: "This paper addresses the strategic allocation of distributed energy resources (DER) in the distribution network for enhancing grid reliability. The goal is to demonstrate that DER can be utilized to support system loads during contingencies, significantly increasing the network's resilience, since it's properly allocated. Through spatial analyses and electrical network modeling, areas suitable to receive DER were identified, considering factors such as losses due to the integration of distributed generation and variations in load voltage levels, with a focus on ensuring supply reliability and energy quality for consumers during contingencies cases."
   },
@@ -142,14 +142,14 @@ window.PUBLICACOES = [
     type: "conf", year: 2024, loc: "Belo Horizonte, Brasil",
     title: "Análise de Impacto de Fontes de Energia Renovável nas Perdas Técnicas de Sistemas de Distribuição",
     url: "https://doi.org/10.53316/cbgd2024.004",
-    meta: [["event", "9° Congresso Brasileiro de Geração Distribuída (CBGD 2024)", "https://www.cbgd.com.br/site/"]],
+    meta: [["event", "9° Congresso Brasileiro de Geração Distribuída (CBGD 2024)"]],
     al: "pt",
     abs: "O estudo apresenta o resultado de um estudo comparativo entre os impactos da geração fotovoltaica e eólica nas perdas técnicas de sistemas elétricos. Utilizando simulações no OpenDSS, foi observado que ambas as formas de geração distribuída contribuem para a redução significativa das perdas, aumentando a eficiência do sistema. No entanto, a geração fotovoltaica, com seus picos abruptos, gerou flutuações que podem afetar a estabilidade da rede, enquanto a geração eólica teve um impacto mais estável e menos perturbador. O estudo ressalta a importância de estratégias de controle específicas para otimizar os benefícios de cada tipo de fonte renovável e assegurar a resiliência do sistema elétrico."
   },
   {
     type: "conf", year: 2024, loc: "São Paulo, Brasil",
     title: "Alocação Ótima de Geração Distribuída para Contribuição ao Atendimento de Carga em Situação de Contingência",
-    url: "https://cidebrasil.com.br/wp-content/uploads/2024/05/66135cc6d5108.pdf",
+    url: "https://www.researchgate.net/publication/416769939_Alocacao_Otima_de_Geracao_Distribuida_para_Contribuicao_ao_Atendimento_de_Carga_em_Situacao_de_Contingencia",
     meta: [["event", "II Congresso de Inovação na Distribuição de Energia Elétrica", "https://cidebrasil.com.br/"]],
     al: "pt",
     abs: "O estudo abordou a implementação estratégica da geração distribuída (GD) em sistemas de distribuição de energia, especificamente durante contingências, empregando métodos computacionais avançados. Investigou-se o potencial da GD para diversificar a matriz energética brasileira, reduzir a dependência de combustíveis fósseis e promover a sustentabilidade ambiental. Além disso, analisou-se o papel da GD na melhoria da resiliência da rede, visando mitigar problemas de forma inteligente. Utilizando análises espaciais e modelagem de redes elétricas, identificaram-se áreas propícias para a GD, levando em conta fatores como perdas causadas pela inserção da geração distribuída e variações no nível de tensão das cargas, com foco na garantia do fornecimento e na qualidade da energia para os consumidores."

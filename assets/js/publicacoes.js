@@ -80,7 +80,7 @@
       return "<span><b>" + L[m[0]] + ":</b> " + link(m[1], m[2]) + "</span>";
     }).join("");
     meta += '<span class="pub-where">' + icon("pin", "pin") + place(p.loc) + '<span class="dot">·</span>' + p.year + "</span>";
-    var cta = p.type === "book" && !p.chapter ? L.readBook : L.readPaper;
+    var cta = p.type === "book" ? L.readBook : L.readPaper;
     return '<li class="pub" data-type="' + p.type + '" data-search="' + esc((p.title + " " + p.meta.map(function (m) { return m[1]; }).join(" ") + " " + p.year + " " + p.abs).toLowerCase()) + '">' +
       cover(p) +
       "<div>" +
