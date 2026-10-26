@@ -38,8 +38,11 @@ assets/
 scripts/versao.ps1            atualiza a versão de CSS/JS antes de publicar
 ```
 
-O menu e o rodapé são gerados por `assets/js/site.js`; para alterá-los, edite esse arquivo
-(não é preciso mexer em cada página).
+O menu e o rodapé são definidos em `assets/js/site.js`; para alterá-los, edite esse arquivo
+(não é preciso mexer em cada página). O script `scripts/gerar-html.js` grava o menu, o
+rodapé e a lista de publicações dentro dos arquivos `.html`, para que os buscadores encontrem
+os links e as publicações sem depender do JavaScript. Ele roda junto com `versao.ps1`
+(veja *Publicação*) ou isoladamente com `node scripts/gerar-html.js`.
 
 ## Idiomas
 
@@ -87,9 +90,11 @@ sobre a página (usado no agendamento de atendimento).
 
 ## Publicação
 
-1. Execute `powershell -File scripts\versao.ps1`. Ele atualiza o número de versão (`?v=...`)
-   de CSS e JS em todas as páginas, para que os visitantes recebam o visual novo
-   imediatamente, sem precisar limpar o cache do navegador.
+1. Execute `powershell -File scripts\versao.ps1`. Ele grava no HTML o menu, o rodapé e as
+   publicações (requer o [Node.js](https://nodejs.org/) instalado) e atualiza o número de
+   versão (`?v=...`) de CSS e JS em todas as páginas, para que os visitantes recebam o visual
+   novo imediatamente, sem precisar limpar o cache do navegador. Rode-o sempre que alterar
+   o menu, o rodapé, as publicações ou qualquer arquivo de CSS/JS.
 2. Envie as alterações para o branch `main`:
    ```
    git add -A

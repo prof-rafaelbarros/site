@@ -95,9 +95,7 @@
       "</div></li>";
   }
 
-  function render() {
-    var data = window.PUBLICACOES || [];
-    var out = document.getElementById("pub-list");
+  function markup(data) {
     var html = "";
     GROUPS.forEach(function (g) {
       var list = data.filter(function (p) { return p.type === g.type; });
@@ -105,8 +103,15 @@
         '<h2 class="section-title">' + g.title + ' <span class="count" data-count>' + list.length + "</span></h2>" +
         '<ul class="pub-list">' + list.map(item).join("") + "</ul></section>";
     });
-    html += '<p class="empty" hidden>' + L.empty + "</p>";
-    out.innerHTML = html;
+    return html + '<p class="empty" hidden>' + L.empty + "</p>";
+  }
+  // usado por scripts/gerar-html.js para gravar a lista no HTML
+  window.RB_PUBS = markup;
+
+  function render() {
+    var data = window.PUBLICACOES || [];
+    var out = document.getElementById("pub-list");
+    out.innerHTML = markup(data);
 
     // contadores dos filtros
     document.querySelectorAll("[data-filter]").forEach(function (b) {

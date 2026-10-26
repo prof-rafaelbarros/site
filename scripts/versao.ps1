@@ -2,6 +2,9 @@
 # para que os navegadores baixem os arquivos novos logo após cada publicação.
 # Uso: powershell -File scripts\versao.ps1
 $root = Split-Path $PSScriptRoot -Parent
+# grava menu, rodapé e publicações no HTML (requer Node.js)
+if (Get-Command node -ErrorAction SilentlyContinue) { node (Join-Path $PSScriptRoot "gerar-html.js") }
+else { Write-Warning "Node.js nao encontrado: menu, rodape e publicacoes nao foram atualizados no HTML." }
 $v = Get-Date -Format "yyyyMMddHHmm"
 $enc = New-Object System.Text.UTF8Encoding $false
 Get-ChildItem $root -Filter *.html | ForEach-Object {

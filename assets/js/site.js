@@ -140,6 +140,9 @@
       '<div class="footer-bottom"><span>© ' + year + " Rafael M. R. Barros. " + T("Todos os direitos reservados.", "All rights reserved.", "Todos los derechos reservados.") + "</span></div></div>";
   }
 
+  // usado por scripts/gerar-html.js para gravar menu e rodapé no HTML
+  window.RB_BUILD = { header: buildHeader, footer: buildFooter };
+
   // ---------- idioma ----------
   var root = document.documentElement;
   var ptTitle = document.title;
