@@ -36,6 +36,8 @@ assets/
                                  bases/: ícones das bases bibliográficas)
   docs/                       arquivos para download da página Orientações
 scripts/versao.ps1            atualiza a versão de CSS/JS antes de publicar
+scripts/gerar-html.js         grava menu, rodapé e publicações no HTML (chamado por versao.ps1)
+CLAUDE.md                     instruções para o Claude Code dar manutenção ao site
 ```
 
 O menu e o rodapé são definidos em `assets/js/site.js`; para alterá-los, edite esse arquivo
