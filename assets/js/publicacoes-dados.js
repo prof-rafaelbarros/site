@@ -245,7 +245,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2015, loc: "Puerto Iguazú, Argentina",
     title: "Monitoramento Térmico de um Transformador de Distribuição Monofásico Usando Sensores Baseados em Redes de Bragg",
-    url: "https://drive.google.com/file/d/1x6FjXegHZmLKsiNXtrBpK_9QWNc3mL4C/view",
+    url: "https://www.researchgate.net/publication/417067036_Monitoramento_Termico_de_um_Transformador_de_Distribuicao_Monofasico_Usando_Sensores_Baseados_em_Redes_de_Bragg",
     meta: [["event", "XVI Encuentro Regional Iberoamericano de Cigré (ERIAC)", "https://sites.google.com/site/cigrearg/Novedades/xvieriac-encuentroregionaliberoamericanodecigre"]],
     al: "pt",
     abs: "Para a realização de um monitoramento térmico em um transformador, diferentes técnicas podem ser aplicadas. Dentre essas técnicas, a medição de temperatura empregando Redes de Bragg associadas a fibras óticas se destaca devido ao fato de possuir sensibilidade elevada, imunidade a interferências eletromagnéticas, imunidade química e biológica, tamanho e peso reduzidos, capacidade de monitoramento remoto e em tempo real e capacidade de multiplexação. Assim, neste trabalho é apresentado o monitoramento térmico de um transformador de distribuição monofásico aplicando-se medição direta da temperatura em pontos estratégicos fazendo uso de sensores ópticos baseados em Redes de Bragg. Além disso, uma avaliação dos resultados obtidos é feita, confrontando-os com simulações de propagação de calor realizadas no transformador. São ainda determinadas relações de proporcionalidade entre a medição de temperatura do topo do óleo e a do ponto mais quente medido, indicando uma forma alternativa de determinação do ponto mais quente do transformador. Expressões analíticas da temperatura em função do tempo também foram determinadas, usando o método dos mínimos quadrados, verificando o grau de correlação da simulação com as medições."
@@ -253,7 +253,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2015, loc: "Białystok, Polônia",
     title: "Evaluation of Mechanical Criteria Applied to the Transformers Windings",
-    url: "https://drive.google.com/file/d/1yeh5SvTSoUm68x94IZEFO3RMT-NZeDwV/view",
+    url: "https://www.researchgate.net/publication/417067642_Evaluation_of_Mechanical_Criteria_Applied_to_the_Transformers_Windings",
     meta: [["event", "XXIII International Conference on Electromagnetic Disturbances (EMD)"]],
     al: "en",
     abs: "Transformers are essential equipment for electrical systems and consist in the components of largest cost. Thus, when these devices have some kind of flaw, their repair or replacement, usually time consuming and costly, are needed. Thereby, in this paper the Von Mises criterion to the evaluation of failure proximity on the transformers windings is analyzed. This criterion is compared with the maximum normal stress criterion, which is normally used in transformer literature. With the results, it is possible to observe that the Von Mises criterion is more reasonable compared with the maximum normal stress criterion. It is proposed to use the Von mises criterion, since the results obtained, during the transformers design, can be closer to reality."
@@ -261,7 +261,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2014, loc: "Foz do Iguaçu, Brasil",
     title: "Redução de Campo Elétrico em Linhas de Transmissão de Alta Tensão Utilizando Malha de Blindagem",
-    url: "https://drive.google.com/file/d/1j_tSE0DEsjMDQTSonMzKpsxZeKG7MEZg/view",
+    url: "https://www.researchgate.net/publication/417066689_Reducao_de_Campo_Eletrico_em_Linhas_de_Transmissao_de_Alta_Tensao_Utilizando_Malha_de_Blindagem",
     meta: [["event", "V Simpósio Brasileiro de Sistemas Elétricos (SBSE)"]],
     al: "pt",
     abs: "Este trabalho tem como objetivo o estudo de uma nova técnica para redução do campo elétrico gerado por linhas de transmissão, a técnica se baseia na utilização de condutores aterrados para formação de uma malha de blindagem sob a LT. O estudo foi realizado principalmente por meio de simulações computacionais baseadas no Método dos Elementos Finitos, e tem como motivação o atendimento as exigências da Resolução Normativa 398/2010 da ANEEL, em que se determinam os limites de exposição ocupacional e da população em geral a campos elétricos no Brasil. O estudo mostrou que com o uso da técnica proposta é possível reduzir o campo elétrico gerado por linhas de transmissão em mais de 50%."
