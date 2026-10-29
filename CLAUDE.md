@@ -38,8 +38,10 @@ estrutura de pastas e as tarefas comuns; leia-o antes de alterar o site.
 
 ## Publicação
 
-- Trabalhe no branch indicado pela sessão. Envie para `main` (o que publica o site) somente
-  com autorização do usuário em cada caso; quando autorizado, faça merge direto, sem pull request.
+- Trabalhe no branch indicado pela sessão. Quando a alteração estiver implementada e os
+  testes passarem, faça o commit e o merge direto (fast-forward) em `main` (o que publica o
+  site), sem pull request e sem pedir autorização: o usuário autorizou isso de forma
+  permanente. Se algum teste falhar ou houver dúvida sobre o conteúdo, pergunte antes.
 - Após o push em `main`, confira a execução *pages build and deployment* no GitHub Actions
   e teste o site publicado (a rede do ambiente permite acessar `github.io`).
 
