@@ -123,6 +123,14 @@ window.PUBLICACOES = [
 
   // ---------------- Anais de congressos ----------------
   {
+    type: "conf", year: 2026, loc: "Bruxelas, Bélgica",
+    title: "Voltage Regulation Using Batteries in Electrical Distribution Systems",
+    url: "https://doi.org/10.1049/icp.2026.3142",
+    meta: [["event", "CIRED 2026 Brussels Workshop", "https://www.cired.net/"]],
+    al: "en",
+    abs: "The objective of this paper is to utilize battery energy storage systems (BESS) for voltage regulation in distribution networks with high penetration of distributed energy resources (DERs). A real distribution feeder with significant DER integration was used in the study, and time-series simulations were conducted in OpenDSS integrated with Python to enable detailed analysis of network behavior and coordinated BESS operation. Battery capacity and siting were determined based on the daily generation surplus, with emphasis on mitigating overvoltages and eliminating reverse power flow. Simulation results demonstrate the proposed strategy's effectiveness in improving voltage quality and restoring regulatory compliance. It is concluded that BESS deployment represents a viable and scalable solution for enhancing the stability and reliability of distribution systems with elevated levels of DER penetration."
+  },
+  {
     type: "conf", year: 2025, loc: "Belo Horizonte, Brasil",
     title: "Diagnóstico e Correção da BDGD Ordinária para Execução de Fluxo de Carga em um Alimentador da Neoenergia Pernambuco",
     url: "https://www.researchgate.net/publication/416769469_Diagnostico_e_Correcao_da_BDGD_Ordinaria_para_Execucao_de_Fluxo_de_Carga_em_um_Alimentador_da_Neoenergia_Pernambuco_Tema_Redes_de_Distribuicao",

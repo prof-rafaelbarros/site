@@ -31,7 +31,8 @@
     "Índia": ["India", "India"], "Inglaterra": ["England", "Inglaterra"], "Polônia": ["Poland", "Polonia"],
     "Suécia": ["Sweden", "Suecia"], "Amsterdã": ["Amsterdam", "Ámsterdam"], "Londres": ["London", "Londres"],
     "Estocolmo": ["Stockholm", "Estocolmo"], "Nova York": ["New York", "Nueva York"], "São Francisco": ["San Francisco", "San Francisco"],
-    "Havana": ["Havana", "La Habana"]
+    "Havana": ["Havana", "La Habana"], "Bélgica": ["Belgium", "Bélgica"],
+    "Bruxelas": ["Brussels", "Bruselas"]
   };
   function place(loc) {
     var parts = loc.split(", ");
