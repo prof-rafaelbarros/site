@@ -269,7 +269,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2014, loc: "Campina Grande, Brasil",
     title: "Uma Análise Térmica de Para-raios Poliméricos de ZnO Utilizando o Método dos Elementos Finitos",
-    url: "https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxlbmNvbnRyb2dzZXxneDo2MmQwNzgyMDQ2M2JhYWEz",
+    url: "https://www.researchgate.net/publication/417168755",
     meta: [["event", "4º Encontro do Grupo de Sistemas Elétricos da Universidade Federal de Campina Grande (EGSE)"]],
     al: "pt",
     abs: "Os para-raios são equipamentos importantes para a proteção dos sistemas elétricos, e seu tempo de vida útil é afetado pelos esforços elétricos e térmicos. O comportamento térmico de para-raios poliméricos de pequeno e médio porte quando submetidos a esforços elétricos foi estudado, a fim de facilitar a compreensão de seu processo de transferência de calor. Uma transferência de calor mais eficiente do para-raios para o meio ambiente reduz os efeitos nocivos das solicitações térmicas e elétricas. Simulações computacionais com a utilização do software COMSOL Multiphysics®, que se baseia no Método dos Elementos Finitos, foram realizadas. Com o resultado das simulações foi possível obter um mapeamento térmico dos para-raios, com as curvas de temperatura durante o período de aquecimento e resfriamento. Assim, foi possível concluir que as simulações computacionais abordadas neste trabalho podem ser uma ferramenta útil para o estudo térmico e o monitoramento de para-raios."
@@ -285,7 +285,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2013, loc: "Estocolmo, Suécia",
     title: "Electric Field Mapping in High Voltage Substation Using the Finite Elements Method",
-    url: "http://www.cired.net/publications/cired2013/pdfs/CIRED2013_1298_final.pdf",
+    url: "https://www.researchgate.net/publication/417174816",
     meta: [["event", "22nd International Conference on Electricity Distribution (CIRED)", "https://www.cired.net/"]],
     al: "en",
     abs: "This paper aimed to study the behaviour of electric field and its influence within and in the vicinity of a high voltage substation, since the presence of electric fields intense can produce interactions with living organisms from harmful effects by long-term exposure. The study was performed by means of computer simulation using the software COMSOL Multiphysics®, which is based on Finite Element Method (FEM). With results of the simulations was possible to weigh if the values obtained meets the levels of electric field recommended by legislation. Was also possible to determine the voltage induced in a metallic tube in soil and in one human, the touch voltage and step voltage on the patio of the substation. The results of simulations were shown to be coherent, and they may serve as an aid in the evaluation process of electric field of complex structures."
@@ -293,7 +293,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2013, loc: "Viña del Mar, Chile",
     title: "3D Electric Field Mapping in High Voltage Substation Using the Finite Elements Method",
-    url: "https://drive.google.com/file/d/1H1DJy6d7hQlWilF6qWElm2jGuefWknCq/view",
+    url: "https://www.researchgate.net/publication/417174521",
     meta: [["event", "10th Latin-American Congress on Electricity Generation and Transmission (CLAGTEE)"]],
     al: "en",
     abs: "This paper aims to study the behavior of electric field and its influence within and in the vicinity of a high voltage substation, since the presence of intense electric fields can produce harmful interactions with living organisms by long-term exposure. The study was performed by means of computer simulation, which is based on Finite Element Method. The simulation results allowed to evaluate if the electric field values obtained meet the legislation recommended levels. It was also possible to determine the voltage induced in a metallic tube, in humans, the touch and step potentials on the level of the substations floor. The results of simulations are coherent, and they may serve as an aid in the evaluation process of electric field of complex structures, and also in new projects designs."
