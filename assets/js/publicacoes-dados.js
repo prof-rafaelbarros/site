@@ -301,7 +301,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2012, loc: "Goiânia, Brasil",
     title: "Mapeamento de Campo Elétrico de Torres de Linha de Transmissão de Alta Tensão Utilizando o Método dos Elementos Finitos",
-    url: "https://drive.google.com/file/d/1rffAhcD3lxTy3XE5rY4CfEYNHYvsgwBx/view",
+    url: "https://www.researchgate.net/publication/417410629",
     meta: [["event", "IV Simpósio Brasileiro de Sistemas Elétricos (SBSE)"]],
     al: "pt",
     abs: "O trabalho apresenta um estudo sobre o comportamento do campo elétrico e sua influência nas proximidades de linhas de transmissão de alta tensão, visto que a presença de campos elétricos intensos pode produzir interações com organismos vivos de efeito danoso. O estudo foi realizado por meio de simulações computacionais baseadas no Método dos Elementos Finitos. Com os resultados foi possível determinar se os valores obtidos estão de acordo com os limites de campo elétrico impostos pelo Art. 4º da Lei nº 11.934, de 5 de maio de 2009. Alguns valores foram confrontados com uma experiência de medição de campo elétrico real, e mostraram-se bastante coerentes. O método desenvolvido pode ser utilizado como um auxílio valioso no processo de avaliação de campo elétrico em estruturas complexas."
@@ -309,7 +309,7 @@ window.PUBLICACOES = [
   {
     type: "conf", year: 2011, loc: "Havana, Cuba",
     title: "Estudo de Distribuição de Campo Elétrico em Isoladores Poliméricos para Determinação de Posicionamento Ótimo de Anel Equalizador",
-    url: "https://drive.google.com/file/d/10ysSeoTg9iE9CCwVdCU-2VSmQFu5J2D3/view",
+    url: "https://www.researchgate.net/publication/417410537",
     meta: [["event", "X Congreso Latinoamericano y VII Iberoamericano en Alta Tensión y Aislamiento Eléctrico (ALTAE)"]],
     al: "pt",
     abs: "Este trabalho apresenta uma avaliação da distribuição de campo elétrico em um isolador polimérico, visando as adequações nesta distribuição nas proximidades da alta tensão em função do posicionamento do anel equalizador e da utilização de isoladores de vidro entre a ferragem fase do isolador polimérico e o condutor. A distribuição do campo elétrico foi determinada através de simulações computacionais baseadas no método dos elementos finitos. Os resultados sugerem uma posição ótima para a instalação do anel equalizador e fazem uma avaliação sobre a utilização de isoladores de vidro como extensão."
