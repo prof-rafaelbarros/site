@@ -208,6 +208,7 @@
 
     initCarousel();
     initPopup();
+    initMatricula();
     setLang(getLang(), false);
   }
 
@@ -292,6 +293,62 @@
     });
     box.addEventListener("click", function (e) { if (e.target === box) close(); });
     box.querySelector(".popup-close").addEventListener("click", close);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  }
+
+  // Botões com data-matricula só abrem o link após validar a matrícula (padrão 00000EEGR0000)
+  function initMatricula() {
+    if (!document.querySelector("[data-matricula]")) return;
+    var box = document.createElement("div");
+    box.className = "popup";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-labelledby", "mat-msg");
+    box.innerHTML = '<form class="popup-panel mat-panel" novalidate>' +
+      '<p id="mat-msg">' + T("O acesso à turma é restrito a alunos(as) matriculados. Informe sua matrícula:",
+        "Access to the class is restricted to enrolled students. Enter your student ID:",
+        "El acceso a la clase está restringido a estudiantes matriculados. Informe su matrícula:") + "</p>" +
+      '<input type="text" id="mat-input" autocomplete="off" spellcheck="false" maxlength="20" aria-labelledby="mat-msg" aria-describedby="mat-erro">' +
+      '<p class="mat-erro" id="mat-erro" role="alert" hidden>' + T("Matrícula inválida", "Invalid student ID", "Matrícula inválida") + "</p>" +
+      '<div class="mat-actions">' +
+      '<button type="button" class="btn btn-outline mat-fechar">' + T("Fechar", "Close", "Cerrar") + "</button>" +
+      '<button type="submit" class="btn btn-dark">' + T("Acessar", "Access", "Acceder") + "</button>" +
+      "</div></form>";
+    document.body.appendChild(box);
+    var form = box.querySelector("form");
+    var input = box.querySelector("#mat-input");
+    var erro = box.querySelector("#mat-erro");
+    var url = null, last = null;
+
+    function close() {
+      box.classList.remove("open");
+      document.body.style.overflow = "";
+      if (last) last.focus();
+    }
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-matricula]");
+      if (!b) return;
+      last = b;
+      url = b.getAttribute("data-matricula");
+      input.value = "";
+      erro.hidden = true;
+      box.classList.add("open");
+      document.body.style.overflow = "hidden";
+      input.focus();
+    });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (/^\d{5}EEGR\d{4}$/.test(input.value.trim().toUpperCase())) {
+        close();
+        window.open(url, "_blank", "noopener");
+      } else {
+        erro.hidden = false;
+        input.select();
+      }
+    });
+    input.addEventListener("input", function () { erro.hidden = true; });
+    box.querySelector(".mat-fechar").addEventListener("click", close);
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
   }
 

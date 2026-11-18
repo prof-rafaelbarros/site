@@ -252,6 +252,14 @@ a.card:hover .card-media img { transform: scale(1.03); }
 .popup-close { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--navy-800); }
 .popup iframe { flex: 1; width: 100%; border: 0; }
 @media (max-width: 640px) { .popup { padding: 0; } .popup-panel { height: 100%; border-radius: 0; } .popup-ext { display: none; } }
+/* validação de matrícula (página Ensino) */
+.popup-panel.mat-panel { width: min(440px, 100%); height: auto; padding: 24px; gap: 14px; }
+.mat-panel p { margin: 0; }
+.mat-panel input { width: 100%; font: 1rem var(--sans); padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); }
+.mat-panel input:focus { outline: 2px solid var(--accent); border-color: transparent; background: #fff; }
+.mat-erro { color: #b42318; font-weight: 600; }
+.mat-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 640px) { .popup:has(.mat-panel) { padding: 16px; } .popup-panel.mat-panel { height: auto; border-radius: var(--radius); } }
 
 /* ---------- sobre ---------- */
 .profile { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 56px; align-items: start; }

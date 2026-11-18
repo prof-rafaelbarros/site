@@ -90,6 +90,13 @@ o atributo `download`, que define o nome do arquivo baixado:
 **Botão que abre em pop-up** — links com o atributo `data-popup` abrem dentro de uma janela
 sobre a página (usado no agendamento de atendimento).
 
+**Acesso às turmas do Classroom** — em `ensino.html`, os botões "Acessar Classroom" são
+`<button data-matricula="LINK DA TURMA">`. Ao clicar, abre-se uma janela que pede a matrícula;
+o link só é aberto se ela seguir o padrão `00000EEGR0000` (5 dígitos, `EEGR`, 4 dígitos).
+Para trocar a turma, altere o link no atributo `data-matricula`. A verificação é feita no
+navegador e serve como orientação aos visitantes, não como proteção: o link fica visível no
+código da página.
+
 ## Publicação
 
 1. Execute `powershell -File scripts\versao.ps1`. Ele grava no HTML o menu, o rodapé e as
