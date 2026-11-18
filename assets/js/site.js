@@ -305,9 +305,9 @@
     box.setAttribute("aria-modal", "true");
     box.setAttribute("aria-labelledby", "mat-msg");
     box.innerHTML = '<form class="popup-panel mat-panel" novalidate>' +
-      '<p id="mat-msg">' + T("O acesso à turma é restrito a alunos(as) matriculados. Informe sua matrícula:",
-        "Access to the class is restricted to enrolled students. Enter your student ID:",
-        "El acceso a la clase está restringido a estudiantes matriculados. Informe su matrícula:") + "</p>" +
+      '<p id="mat-msg">' + T("Acesso restrito a alunos(as) matriculados(as). Informe sua matrícula:",
+        "Access restricted to enrolled students. Enter your student ID:",
+        "Acceso restringido a estudiantes matriculados(as). Informe su matrícula:") + "</p>" +
       '<input type="text" id="mat-input" autocomplete="off" spellcheck="false" maxlength="20" aria-labelledby="mat-msg" aria-describedby="mat-erro">' +
       '<p class="mat-erro" id="mat-erro" role="alert" hidden>' + T("Matrícula inválida", "Invalid student ID", "Matrícula inválida") + "</p>" +
       '<div class="mat-actions">' +
